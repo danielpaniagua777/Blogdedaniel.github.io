@@ -1,0 +1,85 @@
+body {
+   background-image: url('imagenes/morado.png'); background-size: cover;background-size: 100%;
+}
+
+h1 {
+  color: black;
+  font-family:  "ＭＳ Ｐゴシック" ; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
+  font-size: 300%;
+  text-align: center;
+}
+
+header {
+background-image: url('imagenes/tierra2.gif'); background-size: cover;background-size: 100%;
+}
+
+nav {
+  text-align: center;
+  font-family:  "ＭＳ Ｐゴシック";
+  font-size: 20px;
+  margin-top: 20px;ç
+  justify-content: center;
+  padding:30px;
+
+}
+
+div.columna{
+    background: linear-gradient(135deg, #6a11cb, #2575fc); color: white; padding: 20px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); text-align: center; transition: transform 0.3s, box-shadow 0.3s; font-size: large;} div.columna:hover { transform: translateY(-5px); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+
+ }
+
+h4{
+  margin-left: 2%;
+  margin-right: 2%;
+  color: black;
+  text-align: justify;
+  font-size:xx-large;
+}
+
+
+
+p{
+ margin-left: 2%;
+  margin-right: 2%;
+  }
+
+li{
+margin-left: -11%;
+  margin-right: 2%
+}
+
+aside {
+background: linear-gradient(135deg, #6a11cb, #2575fc); color: white; padding: 20px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); text-align: center; transition: transform 0.3s, box-shadow 0.3s; } .chulo-div:hover { transform: translateY(-5px); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); 
+  
+}
+
+
+div#ae1 {
+background: linear-gradient(135deg, #6a11cb, #2575fc); color: white; padding: 20px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); text-align: center; transition: transform 0.3s, box-shadow 0.3s; font-size: large;} div#ae1:hover { transform: translateY(-5px); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+
+}
+
+div#ae2 {
+background: linear-gradient(135deg, #6a11cb, #2575fc); color: white; padding: 20px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); text-align: center; transition: transform 0.3s, box-shadow 0.3s; font-size: large;} div#ae2:hover { transform: translateY(-5px); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+
+}
+
+
+
+section  {
+  justify-content: center;
+  display: flex;
+  column-gap: 20px;
+}
+
+}
+
+form{
+background-color: white;
+  text-align: center;
+  margin-left: 2%;
+  margin-right: 2%;
+  color: black;
+  font-size: 20px;
+
+ }

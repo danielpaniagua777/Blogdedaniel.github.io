@@ -1,0 +1,188 @@
+<html lang="es">
+<head>
+<title>Blog de Daniel</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Blog de Daniel</title>
+</head>
+
+
+<body>
+<header>
+<center><img src="Imagenes/tierra2.gif" alt="centered image" header-size: cover;header-size: 100%;></center> 
+</header>
+<nav><h2 style="> Navegador </h2>
+ </nav>
+    <p>Clicks: <span id="contador"> </span></p>
+    
+<section>
+<div class="columna">
+<h4>INTRODUCCIÓN</h4>
+<p>Hola soy Daniel Paniagua Sánchez y este es mi blog. Aquí podreis encontrar  </p>
+<center><img src="Imagenes/placeholder.jpg"></center>
+</div>
+
+<div class="columna">
+<h4>PROYECTOS</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<center><img src="Imagenes/placeholder.jpg"></center>
+</div>
+
+<aside> 
+            <h2>FECHAS</h2> 
+            <ul> 
+                <li><a href="#"><h3>2024</h3></a></li> 
+                <li><a href="#">Octubre</a></li> 
+                <li><a href="#">Septiembre</a></li> 
+                <li><a href="#"><h3>2023</h3></a></li>         
+                <li><a href="#">Julio</a></li> 
+                <li><a href="#">Junio</a></li> 
+                
+            </ul> 
+</aside> 
+</section>
+
+<br>
+<br>
+
+<section>
+<div id="ae1">
+<h4>TÍTULO</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<center><img src="Imagenes/placeholder2.jpg"></center>
+</div>
+
+<div id="ae2">
+<h4>TÍTULO</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<center><img src="Imagenes/placeholder2.jpg"></center>
+</div>
+
+</section>
+
+<br>
+<br>
+<center><h3 style="color:white;">COMENTARIOS</h3></center>
+<div class="columna">
+<form name="prueba">
+   Nombre: <input type="text"id="nombre" />
+   Correo: <input type="text"id="correo" />
+<br>
+<br>
+   Tu dirección de correo no será publicada
+<br>
+ Escribe tu comentario
+<br>
+    
+   <textarea name="mensaje" id="mensaje" cols="50" rows="10"
+  placeholder="Escriba su comentario aquí"></textarea>
+<br>
+</form>
+</div>
+
+<script>
+function unirTexto(){
+
+var c1=document.getElementById('nombre').value;
+var c2=document.getElementById('correo').value;
+var t1=document.getElementById('mensaje').value;
+  var p = t1.split(/\n/g);
+  var resultado = document.getElementById('resultado');
+var comentario = document.getElementById('comentario');
+  var html = "";
+   for (var i = 0; i < p.length; i++) {
+    html += c1 +' '+ "ha escrito "+ p[i];
+  resultado.value = html;
+  resultado.style.display = "block";
+comentario.value = html;
+  comentario.style.display = "inline";
+}}
+
+function limpiar() {
+document.getElementById('nombre').value =" ";
+document.getElementById('correo').value =" ";
+document.getElementById('mensaje').value =" ";
+
+resultado.style.display = "none";
+}
+</script>
+<button onclick="unirTexto();" id="unir">Publicar</button>
+<button onclick="limpiar();" id="limpiar">Nuevo</button><br>
+<br>
+<p style=" color:white;">Mensaje:</p><br><br> <center><textarea style="display:none;" id="resultado" rows="5" cols="50"></textarea></center>
+<br>
+
+
+<div class="columna">
+    <h1 class="text-2xl font-bold mb-4">Chat para tontos GPT API</h1>
+
+    <div id="chat-box" class="bg-white p-4 h-96 overflow-y-auto border border-gray-300 rounded-md mb-4">
+      <!-- Chat messages will appear here -->
+    </div>
+
+    <form id="chat-form" class="flex">
+      <input
+        type="text"
+        id="user-input"
+        class="flex-grow border border-gray-300 p-2 rounded-md focus:outline-none"
+        placeholder="Escribe tu mensaje aquí"
+        required
+      />
+      <button
+        type="submit"
+        class="ml-2 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+      >
+        Publicar
+      </button>
+    </form>
+    
+    <a href="https://free-unoficial-gpt4o-mini-api-g70n.onrender.com/">
+    Pincha aquí para comprobar tu nivel de tontura gpt api  
+    </a>
+  </div>
+
+  <script>
+    const form = document.getElementById('chat-form');
+    const input = document.getElementById('user-input');
+    const chatBox = document.getElementById('chat-box');
+    let loadingMessage;
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const userMessage = input.value;
+      addMessage('You', userMessage);
+      input.value = '';
+
+      // Show loading indicator
+      loadingMessage = addMessage('GPT', 'Typing...');
+      
+      // Make API request
+      try {
+        const response = await fetch(`https://free-unoficial-gpt4o-mini-api-g70n.onrender.com/chat/?query=${userMessage}`, {
+          method: 'GET',
+          headers: {
+            'accept': 'application/json'
+          }
+        });
+        const data = await response.json();
+
+        // Replace loading message with API response
+        loadingMessage.textContent = `GPT: ${data.results || 'No response from the API'}`;
+      } catch (error) {
+        loadingMessage.textContent = 'GPT: Failed to fetch API';
+      }
+    });
+
+    function addMessage(sender, message) {
+      const messageElement = document.createElement('div');
+      messageElement.classList.add('mb-2', 'p-2', 'rounded-md', sender === 'You' ? 'bg-blue-200' : 'bg-gray-200');
+      messageElement.textContent = `${sender}: ${message}`;
+      chatBox.appendChild(messageElement);
+      chatBox.scrollTop = chatBox.scrollHeight; // Scroll to the bottom
+      return messageElement;
+    }
+  </script>
+
+
+</body>
+</html>
